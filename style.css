@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style-type: none;
+}
+
+:root {
+    --secondary: #f7dce5;
+    --primary: #f85a92;
+}
+
+nav {
+    height: 65px;
+    background-color: var(--primary);
+    color: #fff;
+    font-size: 1.2rem;
+    display: block;
+    text-align: center;
+    align-items: center;
+    padding: 16px 12px;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+}
+
+.box {
+    border: 2px solid var(--secondary);
+    font-size: 6vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover {
+    background-color: var(--secondary);
+}
+
+.gameInfo {
+    padding: 0 34px;
+}
+
+.gameInfo h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+img {
+    width: 0;
+    transition: width 1s ease-in-out;
+    margin-top: 10px;
+}
+
+.br-0 {
+    border-right: 0;
+}
+
+.bl-0 {
+    border-left: 0;
+}
+
+.bt-0 {
+    border-top: 0;
+}
+
+.bb-0 {
+    border-bottom: 0;
+}
+
+#reset {
+    margin: 0 23px;
+    padding: 8px 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--primary);
+    color: #fff;
+    transition: 1s ease-in-out;
+    cursor: pointer;
+}
+
+#reset:hover {
+    background-color: #fff;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.info {
+    font-size: 20px;
+}
+
+.line {
+    width: 0vw;
+    transition: 1s ease-in-out;
+    height: 3px;
+    position: absolute;
+    background-color: var(--primary);
+}
+
+@media screen and (max-width: 950px) {
+    .game-container {
+        flex-wrap: wrap;
+    }
+    .gameInfo {
+        margin-top: 34px;
+    }
+    .gameInfo h1 {
+        font-size: 1.5rem;
+    }
+    .container {
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    nav {
+        height: 50px;
+        background-color: var(--primary);
+        color: #fff;
+        font-size: 18px;
+        display: block;
+        text-align: center;
+        align-items: center;
+        padding: 10px;
+    }
+    .logo {
+        display: none;
+    }
+    .gameInfo h1 {
+        font-size: 1rem;
+    }
+    .info {
+        font-size: 15px;
+    }
+}
